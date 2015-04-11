@@ -1,0 +1,410 @@
+
+/*************************reset*********************/
+*
+  outline: none
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -o-box-sizing: border-box
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  &:focus
+    outline: none
+
+a
+  &:hover
+    text-decoration: none
+
+body
+  font: 16px "gothic", "sans serif", arial
+  font-weight: 600
+  margin: 0
+  padding: 0
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+
+
+/****************************************************/
+/*********************mixin**************************/
+/****************************************************/
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+
+@mixin duration($a)
+  -webkit-transition-duration: $a
+  -o-transition-duration: $a
+  -moz-transition-duration: $a
+  transition-duration: $a
+
+
+@mixin rotate($d)
+  -ms-transform: rotate($d+deg)
+  -webkit-transform: rotate($d+deg)
+  -o-transform: rotate($d+deg)
+  transform: rotate($d+deg)
+
+
+@mixin box-shadow($left, $top, $blur, $color)
+  -moz-box-shadow: $left $top $blur $color
+  -webkit-box-shadow: $left $top $blur $color
+  box-shadow: $left $top $blur $color
+
+@mixin opacity($p)
+  -webkit-opacity: $p*0.01
+  -khtml-opacity: $p*0.01
+  -moz-opacity: $p*0.01
+  opacity: $p*0.01
+
+.container-fluid
+  padding: 0
+/****************************************************/
+/*************************header*********************/
+/****************************************************/
+body
+  background: #f6f6f6
+
+.header-wrap
+  margin-bottom: 80px
+
+.main-header
+  overflow: hidden
+  padding: 20px
+.logo
+  float: left
+  margin-left: 50px
+.main-menu
+  float: right
+  margin-right: 50px
+
+  li
+    display: inline-block
+    margin: 50px 20px
+    a
+      padding: 25px 10px
+      text-transform: uppercase
+      color: #000000
+      font-weight: 400
+      &:hover
+        background: #ffea00
+.welcome
+  background: url("../img/top_img.jpg")
+  padding: 30px
+  p
+    margin-left: 30px
+    width: 320px
+    padding: 15px 20px
+    text-transform: uppercase
+    font-size: 35px
+    background: #424146
+    color: #ffea00
+
+
+
+
+
+
+
+
+/****************************************************/
+/*************************content********************/
+/****************************************************/
+.quote
+  background: #ffea00
+  blockquote
+    border: none
+    p
+      font-size: 21px
+      font-weight: 600
+    .author-quote
+      font-size: 11px
+      font-weight: 600
+      float: right
+
+
+
+.content-post
+  background: none
+  font-size: 15px
+  margin-top: 50px
+
+.post
+  margin-bottom: 20px
+
+  .wrapper-post
+    background: #ffea00
+    header, .text-post, .post-info
+      padding: 10px
+    .wrapper-post-img
+      img
+        width: 100%
+        height: auto
+    header
+      a
+        text-transform: uppercase
+        font-size: 23px
+        color: #000000
+        &:hover
+          color: #ff0000
+
+    p
+      font-size: 14px !important
+      font-weight: 600
+      color: #5e5e5e
+      padding: 10px
+  .post-info
+    overflow: hidden
+    .number-like
+      float: left
+      font-size: 12px
+      color: #5e5e5e
+    .info-post-desc
+      font-size: 12px
+      color: #000000
+      float: right
+
+
+.pagination
+  margin-bottom: 30px
+  a
+    font-size: 20px
+    color: #000000
+    padding: 20px
+    &:hover
+      background: #ffea00
+      padding: 20px
+
+  .current
+    background: #ffea00
+    padding: 20px
+    font-size: 20px
+    font-weight: 900
+
+
+
+
+
+/****************************************************/
+/*************************sidebar********************/
+/****************************************************/
+.main-aside
+  section
+    background: #424147
+
+
+
+.search
+  text-align: center
+  padding: 20px 55px
+  form
+    background: #ffffff
+    @include border-radius(30px)
+    position: relative
+  input
+    outline: none
+    border: none
+    padding: 5px
+    font-size: 18px
+    color: #737373
+  button
+    border: none
+    background: #ffffff
+    position: absolute
+    top: 15%
+    right: 30px
+    span
+      font-size: 20px
+
+.categories, .archive
+  margin-top: 20px
+  padding: 10px 30px
+  h3
+    color: #ffea00
+    text-transform: uppercase
+  ul
+    li
+      margin-bottom: 10px
+      background: url("../img/list-style.jpg") no-repeat
+      padding: 5px 40px
+      a
+        text-transform: uppercase
+        color: #ffffff
+
+.popular-post
+  margin-top: 20px
+  padding: 30px
+  h3
+    color: #ffea00
+    text-transform: uppercase
+
+  ul
+    li
+      .wrapper-poppost
+        overflow: hidden
+        .wrapper-img-poppost
+          width: 100px
+          height: 70px
+          float: left
+          img
+            width: 100%
+            height: auto
+        header
+          float: left
+          color: #ffffff
+          display: inline
+          width: 65%
+          text-transform: uppercase
+          margin-left: 10px
+      .poppost-info
+        text-align: right
+        color: #ffea00
+
+
+.tagcloud
+  a
+    text-transform: uppercase
+    font-size: 16px !important
+    padding: 5px
+    background: #ffea00
+    line-height: 35px
+
+
+
+
+
+
+
+
+
+/****************************************************/
+/*************************footer*********************/
+/****************************************************/
+
+.photo-steam
+  ul
+    li
+      display: inline-block
+
+.main-footer
+  background: #414146
+  color: #ffffff
+  font-size: 13px
+  overflow: hidden
+  .sect-footer
+    h3
+      font-size: 18px
+      margin-bottom: 30px
+    .btn-learn-more
+      margin: 20px 0
+      padding: 10px 20px
+      text-align: center
+      background: #000000
+      border: none
+      border-bottom: solid 2px #ffea00
+    ul
+      li
+        overflow: hidden
+        margin-bottom: 10px
+        img
+          float: left
+        p
+          float: left
+          width: 80%
+          margin-left: 20px
+
+.latest-tweets
+  list-style-image: url("../img/twitter-birs-ico.png")
+  list-style-position: inside
+  li
+    margin-bottom: 30px
+    a
+      margin-left: 20px
+      color: #ffffff
+      span
+        &:last-child
+          color: #ffea00
+          font-size: 8
+          display: block
+
+
+
+.header-social
+  margin-bottom: 10px
+.social-list
+  li
+    width: 30px
+    height: 30px
+    display: inline-block
+    background: firebrick
+
+.section-footer3
+  form
+    overflow: hidden
+    input
+      outline: none
+      background: none
+      border: none
+      border-bottom: solid 2px #ffea00
+      color: #ffffff
+      float: left
+      width: 230px
+      height: 28px
+
+    .btn-subscribe
+      background: #000000, url("../img/subscribe-ico.png") 50% 50% no-repeat !important
+      width: 28px
+      height: 28px
+      border: none
+      float: left
+
+
+
+.bottom-footer
+  background: #000000
+  overflow: hidden
+
+.copyright
+  float: left
+  line-height: 60px
+  margin-left: 50px
+
+.menu-footer
+  float: right
+  margin-right: 50px
+
+  li
+    display: inline-block
+    margin: 20px 20px
+    a
+      padding: 10px 10px
+      text-transform: uppercase
+      color: #ffffff
+      font-size: 16px
+      font-weight: 400
+      &:hover
+        background: #ffea00
+
+
+
+
+
+/************************Responsive******************/
+/****************************************************/
+
+@media only screen and (max-width: 1200px)
+
+@media only screen and (max-width: 992px)
+
+@media only screen and (max-width: 768px)
+
+@media only screen and (max-width: 350px)
+
+
